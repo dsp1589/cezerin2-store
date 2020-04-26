@@ -67,7 +67,6 @@ module.exports = {
 				use: [
 					MiniCssExtractPlugin.loader,
 					'css-loader',
-					'postcss-loader',
 					{
 						loader: 'sass-loader',
 						options: {
@@ -76,7 +75,8 @@ module.exports = {
 								includePaths: [ path.resolve('node_modules')],
 							  },
 						},
-					}
+					},
+					'postcss-loader',
 				]
 			}
 		]
@@ -147,3 +147,4 @@ module.exports = {
 		modules: false
 	}
 };
+//rgb(251, 223, 55)

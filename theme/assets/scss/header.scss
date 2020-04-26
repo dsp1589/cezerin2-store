@@ -1,3 +1,5 @@
+@import "our_store";
+
 $header_bg: #fff;
 $header_border: 1px solid #c8c8c8;
 
@@ -8,7 +10,13 @@ header {
 	width: 100%;
 	z-index: 1003;
 	background-color: $header_bg;
-	padding-top: 1.5rem;
+	@if $no_margin_header {
+		padding-top: 0;	
+	}
+	@else {
+		padding-top: 1.5rem;
+	}
+	
 	border-bottom: $header_border;
 }
 
@@ -47,12 +55,19 @@ header {
 
 .header-container {
 	margin: 0 0 10px 0 !important;
+	background-color: $sstore_yellow;
 }
 
 .header-block-right {
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
+}
+
+.fullWidthHeader {
+	@if no_margin_header {
+		max-width: 100%;	
+	}
 }
 
 @media screen and (max-width: 769px) {

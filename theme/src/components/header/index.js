@@ -149,7 +149,7 @@ export default class Header extends React.Component {
 
 		const classToggle = this.state.mobileMenuIsActive
 			? 'navbar-burger is-hidden-tablet is-active'
-			: 'navbar-burger is-hidden-tablet';
+			: 'navbar-burger is-hidden-tablet';	
 		const showBackButton =
 			currentPage.type === 'product' && location.hasHistory;
 
@@ -158,7 +158,7 @@ export default class Header extends React.Component {
 				<header
 					className={this.state.mobileSearchIsActive ? 'search-active' : ''}
 				>
-					<div className="container">
+					<div className="container fullWidthHeader">
 						<div className="columns is-gapless is-mobile header-container">
 							<div className="column is-4 column-burger">
 								{!showBackButton && (
